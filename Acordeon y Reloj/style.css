@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto+Condensed:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', 'Roboto Condensed';
+    background: #393E41;
+}
+
+#acordeon{
+    background: #909569;
+    border-radius: 20px;
+    margin: 30px 10px;
+    padding: 25px 30px;
+}
+
+.title{
+    background: #656A55;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.title:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.seccion{
+    margin: 10px 0;
+}
+
+.contenido{
+    display: none;
+    margin: 10px 0;
+    margin-bottom: 15px;
+    text-align:justify;
+    /* font-family: 'Roboto Condensed'; */
+}
+
+/* RELOJ */
+
+#fecha {
+    color: rgb(206, 33, 33);
+    font-size: 20px;
+    color: #909569;
+}
+
+#dia {
+    color: #fff;
+    font-size: 45px;
+}
+
+#hora {
+    color: #fff;
+    background: linear-gradient(to right, #1F1C18, #8E0E00);
+    background: #656A55;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+.fechaHora {
+    margin-top: 20%;
+} */
