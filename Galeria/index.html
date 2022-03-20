@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio HTML Y JS</title>
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!-- CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js "></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+
+</head>
+
+<body onload="mueveReloj()">
+
+    <section id="global">
+
+        <!-- Cabecera  -->
+        <header>
+
+            <div id="logo">
+                <h1>HTML y JS</h1>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="../AJAX/datos-externos.html">Autores</a></li>
+                    <li><a href="about.html">Acerca de mi</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cambiar Tema</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cambiar color de Tema</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="selector-theme">
+                            <div id="to-green"></div>
+                            <div id="to-red"></div>
+                            <div id="to-blue"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Galeria -->
+        <div id="slider">
+            <div class="galeria">
+                <div><img src="img/otro.jpg" title="Hojas"></div>
+                <div><img src="img/pajaro.jpg" title="The long and winding road"></div>
+                <div><img src="img/cielo.jpg" title="Happy trees"></div>
+            </div>
+        </div>
+
+        <!-- Contenido -->
+        <section id="content">
+
+            <div id="posts">
+                <article class="posts">
+                    <h2>Titulo del articulo</h2>
+                    <span> Fecha de publicacion</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam purus massa, molestie et est sed,
+                        convallis posuere massa. Suspendisse eu dolor massa. Aenean non porta arcu. Maecenas at orci sit
+                        amet ante commodo semper. Morbi ac libero lacus. Integer eros eros, vestibulum scelerisque est
+                        vel, pulvinar tincidunt turpis. Etiam facilisis felis ut mi viverra imperdiet. Donec tempus
+                        vulputate porta. Nullam id nulla eleifend, aliquet enim eget, bibendum sapien. Phasellus
+                        venenatis mauris venenatis est tincidunt commodo ac at lorem. Sed ac justo porttitor, tempor dui
+                        in, posuere arcu. Proin et sapien mi. Quisque eleifend ligula eget quam ultrices, at elementum
+                        felis rutrum. Maecenas eget nunc risus. Donec finibus ligula turpis, ut venenatis sem tristique
+                        ut.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <sidebar id="sidebar">
+            <div id="about">
+                <h4><span>Ingresar</span></h4>
+                <img src="img/pajaro.jpg" />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac ullamcorper
+                    justo.</p>
+            </div>
+        </sidebar>
+
+        <aside id="sidebar">
+        </aside>
+
+
+    </section>
+
+    <footer>
+        <div class="container">
+
+            <div class="fechaHora">
+                <p id="fecha"></p>
+                <p id="dia"></p>
+                <p id="hora"></p>
+            </div>
+            Edwin Jose De La Cruz Espinosa &copy;
+        </div>
+    </footer>
+
+</body>
+
+</html>

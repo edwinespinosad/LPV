@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Contacto</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+    <!-- CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+        integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js "></script>
+    <!-- VALIDATE -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"> -->
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body onload="mueveReloj()">
+    <section id="global">
+        <!-- Cabecera  -->
+        <header>
+            <div class="clearfix"></div>
+            <a id="logo" href="index.html">HTML & JS</a>
+            <nav id="menu">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <!-- <li><a href="reloj.html"></a></li> -->
+                    <li><a href="../AJAX/datos-externos.html">Autores</a></li>
+                    <li><a href="../Acordeon y Reloj/index.html">Acerca de mi</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li id="hora"></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <div id="selector-theme">
+            <div id="to-green"></div>
+            <div id="to-red"></div>
+            <div id="to-blue"></div>
+        </div>
+
+        <!-- Contenido -->
+        <div class="container">
+            <div id="content">
+                <!-- Cargar formulario -->
+                <h2>Contacto</h2>
+
+                <form action="" method="POST" id="form_contact">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name"  />
+
+                    <label for="surname">Apellidos</label>
+                    <input type="text" name="surname" />
+
+                    <label>Email</label>
+                    <input type="email" name="email" />
+
+                    <label for="sex">Sexo</label>
+                    <select name="sex">
+                        <option value="men">Hombre</option>
+                        <option value="woman">Mujer</option>
+                    </select>
+
+                    <label for="date">Fecha de nacimiento</label>
+                    <input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy" />
+
+                    <label for="years">Edad</label>
+                    <input type="number" name="years" data-validation="number" />
+                    <br>
+
+                    <input type="submit" value="Enviar" />
+                </form>
+
+            </div>
+
+            <aside id="sidebar">
+                <div id="about">
+                    <h2>Ingresar</h2>
+                    <img src="./img/caracol.png" />
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac
+                        ullamcorper
+                        justo.</p>
+                </div>
+                <div id="login">
+                    <h4>Identificate</h4>
+                    <form>
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="form_name" required/> <br>
+                        <label for="email">Correo</label>
+                        <br>
+                        <input type="text" name="email" required />
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" required/>
+                        <input type="submit" value="Entrar" />
+                    </form>
+                </div>
+            </aside>
+        </div>
+
+    </section>
+    <footer>
+            Edwin Jose De La Cruz Espinosa &copy;
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+SESION XII
+
+FORMULARIO DE CONTACTO Y VALIDACION 
+
+Hacer archivo contact.html
+
+¿Como hacer página similar?  (copiar estructura de otro html, cambiar la parte del id="box") 
+
+
+			<!-- Contenido -->
+			<section id="content">
+
+				<div id="box">
+					<!-- Cargar formulario -->
+					<h2>Contacto</h2>
+
+					<form action="" method="POST" id="form_contact">
+						<label for="name">Nombre</label>
+						<input type="text" name="name"  />
+
+						<label for="surname">Apellidos</label>
+						<input type="text" name="surname" />
+
+						<label>Email</label>
+						<input type="email" name="email" />
+
+						<label for="sex">Sexo</label>
+						<select name="sex" >
+							<option value="men">Hombre</option>
+							<option value="woman">Mujer</option>
+						</select>
+
+						<label for="date">Fecha de nacimiendo</label>
+						<input type="text" name="date" />
+
+						<label for="years">Edad</label>
+						<input type="number" name="years" data-validation="number"/>
+
+						<input type="submit" value="Enviar" />
+					</form>
+	
+				</div>
+
+
+=======================================
+
+
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="number"],
+select{
+	padding: 5px;
+	border-radius: 2px;
+	border:1px solid #ccc;
+	width: 80%;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+
+
+
+#form_contact{
+	width: 50%;
+	margin-top: 15px;
+	font-family: Helvetica, Arial;
+}
+
+
+#form_contact label{
+	display: block;
+	width: 100%;
+	margin-top: 5px;
+}
+
+
+
+(probar) 
+
+======================
+
+
+VALIDACION    https://igloczek.github.io/formvalidator-net-mirror/ 
+
+<!-- Plugin validacion -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+checar con consola que no marque error.  ¿en que archivo va?  
+
+
+
+========================
+
+usar la validacion en el formuario
+
+
+			<!-- Contenido -->
+			<section id="content">
+
+				<div id="box">
+					<!-- Cargar formulario -->
+					<h2>Contacto</h2>
+
+					<form action="" method="POST" id="form_contact">
+						<label for="name">Nombre</label>
+						<input type="text" name="name" data-validation="alphanumeric" />
+
+						<label for="surname">Apellidos</label>
+						<input type="text" name="surname" data-validation="alphanumeric" />
+
+						<label>Email</label>
+						<input type="email" name="email" data-validation="email"/>
+
+						<label for="sex">Sexo</label>
+						<select name="sex" data-validation="required">
+							<option value="men">Hombre</option>
+							<option value="woman">Mujer</option>
+						</select>
+
+						<label for="date">Fecha de nacimiendo</label>
+						<input type="text" name="date" data-validation="date" data-validation-format="dd-mm-yyyy"/>
+
+						<label for="years">Edad</label>
+						<input type="number" name="years" data-validation="number"/>
+
+						<input type="submit" value="Enviar" />
+					</form>
+	
+				</div>
+
+
+===============================
+
+¿como hacer para que funcione el plugin? 
+
+
+<script>
+  $.validate({
+    lang: 'es'
+  });
+</script>
+
+
+
+
+==========================
+
+	// Validación
+
+
+	if(window.location.href.indexOf('contact') > -1){    ---  ¿que hace esta linea? 
+	
+		$("form input[name='date']").datepicker({
+			dateFormat: 'dd-mm-yy'
+		});
+
+		$.validate({
+		    lang: 'es',
+		    errorMessagePosition: 'top',
+		    scrollToTopOnError: true
+		});
+
+	}
+
+
+
+
+
+
+
+
+
+
+===================
+

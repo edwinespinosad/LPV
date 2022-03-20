@@ -1,0 +1,70 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.clearfix{
+	float: none;
+	clear: both;
+}
+
+
+body{
+	background: url("../img/hojas.jpg");
+	background-attachment: fixed;
+}
+
+#global{
+	width: 65%;
+	margin: 0px auto;
+	margin-top: 30px;
+	padding: 25px;
+	background: white;
+	box-shadow: 0px 0px 2px gray;
+}
+
+
+#logo{
+	font-family: Verdana, Arial;
+	font-size: 28px;
+	letter-spacing: 4px;
+	line-height: 75px;
+	background:  #235E3D;
+	color: white;
+	text-align: center;
+	width: 385px;
+	height: 80px;
+	margin-bottom: 20px;
+	float: left;
+	text-transform: uppercase;
+}
+
+#sidebar{
+	font-family: Helvetica, Arial;
+	width: 31%;
+	float: right;
+}
+
+#sidebar h4{
+	margin-top: 50px;
+	margin-bottom:20px;
+	text-align: center;
+	line-height: 10px;
+	color:#333;
+	background: url("../img/lines.png") repeat-x;
+}
+
+#sidebar h4 span{
+	background: white;
+	padding: 5px;
+}
+
+#sidebar img{
+	width: 100%;
+}
+
+#sidebar p{
+	font-size: 15px;
+	text-align: justify;
+}

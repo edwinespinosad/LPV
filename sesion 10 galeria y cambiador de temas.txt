@@ -1,0 +1,144 @@
+SESION 10  GALERIA Y CAMBIADOR DE TEMAS
+
+
+GALERIA
+=============
+
+1. Buscar slider jquery plugin en google
+
+https://bxslider.com/
+
+Ver examples para conocer uso
+
+1. Incluir librerias en el encabezado (header) 
+2. Hacer div con las fotos que voy a incluir (va en la seccion que ya teniamos) 
+3. Uso el método bxSlider que indica página en mi código javascript
+4. Probar si funciona
+5. Cambiar estilo 
+
+===================
+
+		<!-- Slider --> 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+--------------------
+  <div class="galeria">
+	  <div><img src="img/hojas.jpg" title="Hojas"></div>
+	  <div><img src="img/rojo.jpg" title="The long and winding road"></div>
+	  <div><img src="img/cielo.jpg" title="Happy trees"></div>
+  </div>
+
+
+--------------------
+
+
+	// Galeria 
+
+	  $('.galeria').bxSlider({
+	    mode: 'fade',
+	    captions: false,
+	    slideWidth: 1200,
+	    responsive: true,
+	    pager: true
+	  });
+
+--------------------
+
+.bx-wrapper, .bx-viewport {
+	height: 250px !important;
+}
+
+
+TAREA:  Quitar 3 puntos de abajo de galeria y cambiar velocidad.   (documentacion de plugin)
+
+------------------
+
+CAMBIADOR DE TEMAS 
+A través de hojas de estilo. 
+
+1. Hacer tres archivos css red.css, blue.css y green.css 
+2. Cargar estilo por defecto verde y colocar identificador theme, colocar green.css 
+3. En el styles.css  COPIO al archivo green.css todos las referencias al color background  (menu, fondo, boton) y las ELIMINO de ese archivo.  Probar archivo green. Copiar y cambiar cada estilo  (rojo y azul). 
+4. Hacer botones de cambio, de manera lateral izquierdo al centro.  Tres <div>.  Colocarle estilos. 
+5. Finalmente capturar evento para indicar color deseado.
+
+------------------
+
+body{
+	background: url("../img/hojas.jpg");
+	background-attachment: fixed;
+}
+
+#logo{
+	background: #235E3D;
+}
+
+#menu ul li:hover{
+	background: #235E3D;
+}
+
+.button-more{
+	background: #235E3D;
+}
+
+--------------------------
+
+	<div id="selector-theme">
+	  <div id="to-green"></div>
+	  <div id="to-red"></div>
+          <div id="to-blue"></div>
+       </div>
+------------------------
+
+
+#selector-theme{
+	position: fixed;
+	top:40%;
+	background: rgba(51, 51, 51, 0.5);
+	width: 50px;
+	height: 100px;
+}
+
+#to-green,
+#to-red,
+#to-blue{
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	display: block;
+	margin: 0px auto;
+	margin-top: 5px;
+	margin-bottom: 5px
+}
+
+#to-green{
+	background: #235E3D;
+}
+
+#to-red{
+	background: #CA3413;
+}
+
+#to-blue{
+	background: #1F87C4;
+}
+
+
+---------------------
+
+
+TAREA:  Cambiar color por una imagen en cada botón de tema. Cambiar el puntero del raton para selecccionar.  
+
+-------------------
+
+TAREA: Colocar el reloj en el encabezado o footer del proyecto. Cambiar la opción del menú reloj colocar "Autores",  y en esa página mostrar los usuarios del ejercicio reqres.  
+
+-------------------
+
+
+
+
+
+
+

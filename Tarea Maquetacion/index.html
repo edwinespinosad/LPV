@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<title>HTML y JS</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<!-- CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./js/main.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js "></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body onload="mueveReloj()">
+	<section id="global">
+		<!-- Cabecera  -->
+		<header>
+			<div class="clearfix"></div>
+			<a id="logo" href="index.html">HTML & JS</a>
+			<nav id="menu">
+				<ul>
+					<li><a href="./index.html">Inicio</a></li>
+					<li><a href="../AJAX/datos-externos.html">Autores</a></li>
+					<li><a href="../Acordeon y Reloj/index.html">Acerca de mi</a></li>
+					<li><a href="./contacto.html">Contacto</a></li>
+                    <li id="hora"></li>
+
+				</ul>
+			</nav>
+		</header>
+
+		<div id="selector-theme">
+			<div id="to-green"></div>
+			<div id="to-red"></div>
+			<div id="to-blue"></div>
+		</div>
+		<!-- Galeria -->
+		<div id="slider">
+			<div class="galeria">
+				<div><img src="img/otro.jpg" title="Hojas"></div>
+				<div><img src="img/pajaro.jpg" title="The long and winding road"></div>
+				<div><img src="img/cielo.jpg" title="Happy trees"></div>
+			</div>
+		</div>
+
+		<!-- Contenido -->
+		<div class="container">
+			<section id="content">
+				<div id="posts">
+					<article class="posts">
+						<h2>Titulo del libro</h2>
+						<div class="card-body">
+							<img src="img/despues.jpg" alt="" width="200px">
+							<div class="contenido">
+								<span>Autor: </span>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam purus massa, molestie et
+									est
+									sed,
+									convallis posuere massa. Suspendisse eu dolor massa. Aenean non porta arcu. Maecenas
+									at
+									orci
+									sit
+									amet ante commodo semper. Morbi ac libero lacus. Integer eros eros, vestibulum
+									scelerisque
+									est
+									vel, pulvinar tincidunt turpis. Etiam facilisis felis ut mi viverra imperdiet. Donec
+									tempus
+									vulputate porta. Nullam id nulla eleifend, aliquet enim eget, bibendum sapien.
+									Phasellus
+									venenatis mauris venenatis est tincidunt commodo ac at lorem. Sed ac justo
+									porttitor,
+									tempor
+									dui
+									in, posuere arcu. Proin et sapien mi. Quisque eleifend ligula eget quam ultrices, at
+									elementum
+									felis rutrum. Maecenas eget nunc risus. Donec finibus ligula turpis, ut venenatis
+									sem
+									tristique
+									ut.</p>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<aside id="sidebar">
+				<div id="about">
+					<h2>Ingresar</h2>
+					<img src="./img/caracol.png" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac
+						ullamcorper
+						justo.</p>
+				</div>
+				<div id="login">
+					<h4>Identificate</h4>
+					<form>
+						<label for="name">Nombre</label>
+						<input type="text" name="name" id="form_name" required/> <br>
+						<label for="email">Correo</label>
+						<br>
+						<input type="text" name="email" required />
+						<label for="password">Contraseña</label>
+						<input type="password" name="password" required/>
+						<input type="submit" value="Entrar" />
+					</form>
+				</div>
+			</aside>
+		</div>
+
+	</section>
+	<footer>
+		Edwin Jose De La Cruz Espinosa &copy;
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+
+#sidebar{
+	font-family: Helvetica, Arial;
+	width: 31%;
+	float: right;
+}
+
+#sidebar h4{
+	margin-top: 50px;
+	margin-bottom:20px;
+	text-align: center;
+	line-height: 10px;
+	color:#333;
+	background: url("../img/lines.png") repeat-x;
+}
+
+#sidebar h4 span{
+	background: white;
+	padding: 5px;
+}
+
+#sidebar img{
+	width: 100%;
+}
+
+#sidebar p{
+	font-size: 15px;
+	text-align: justify;
+}

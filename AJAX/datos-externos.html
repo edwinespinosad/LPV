@@ -1,16 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJAX</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/es.min.js "></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Lista de Usuarios</h1>
-    <div class="usuarios" id="usuarios">
+
+<body onload="mueveReloj()">
+    <header>
+        <div class="clearfix"></div>
+        <a id="logo" href="../Tarea Maquetacion/index.html">HTML & JS</a>
+        <nav id="menu">
+            <ul>
+                <li><a href="../Tarea Maquetacion/index.html">Inicio</a></li>
+                <li><a href="./datos-externos.html">Autores</a></li>
+                <li><a href="../Acordeon y Reloj/index.html">Acerca de mi</a></li>
+                <li><a href="../Tarea Maquetacion/contacto.html">Contacto</a></li>
+                <li id="hora"></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div id="selector-theme">
+        <div id="to-green"></div>
+        <div id="to-red"></div>
+        <div id="to-blue"></div>
     </div>
+
+    <div class="container">
+        <div id="content">
+            <h2>Lista de Usuarios</h2>
+            <div class="usuarios" id="usuarios">
+            </div>
+        </div>
+
+        <aside id="sidebar">
+            <div id="about">
+                <h2>Ingresar</h2>
+                <img src="../Tarea Maquetacion/img/caracol.png" />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat, ac
+                    ullamcorper
+                    justo.</p>
+            </div>
+            <div id="login">
+                <h4>Identificate</h4>
+                <form>
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" id="form_name" required/> <br>
+                    <label for="email">Correo</label>
+                    <br>
+                    <input type="text" name="email" required />
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="password" required/>
+                    <input type="submit" value="Entrar" />
+                </form>
+            </div>
+        </aside>
+    </div>
+
+
+    <footer>
+        Edwin Jose De La Cruz Espinosa &copy;
+    </footer>
     <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
