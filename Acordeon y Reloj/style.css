@@ -45,16 +45,16 @@ span {
 }
 
 footer {
-	background: #536A73;
-	margin-top: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 60px;
-	width: 98%;
-	margin: 0 auto;
-	margin-bottom: 10px;
-	border-radius: 10px;
+    background: #536A73;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 98%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
     font-family: 'Poppins', serif;
     font-size: 13px;
 }
@@ -72,27 +72,27 @@ header {
 }
 
 #logo {
-	font-family: 'Montserrat', sans-serif;
-	font-size: 25px;
-	letter-spacing: 4px;
-	background: #536A73;
-	color: #000;
-	margin-top: 28px;
-	text-decoration: none;
-	text-transform: uppercase;
-	float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    letter-spacing: 4px;
+    background: #536A73;
+    color: #000;
+    margin-top: 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+    float: left;
 }
 
 header {
-	background: #536A73;
-	margin: 10px 0px;
-	display: flex;
-	border-radius: 10px;
-	width: 98%;
-	margin: 0 auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	justify-content: space-around;
+    background: #536A73;
+    margin: 10px 0px;
+    display: flex;
+    border-radius: 10px;
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-around;
 }
 
 
@@ -119,7 +119,7 @@ li a:hover {
 body {
     font-family: 'Poppins', 'Roboto Condensed';
     background: #393E41;
-	background: #F2E9D8;
+    background: #F2E9D8;
 
 }
 
@@ -238,4 +238,20 @@ form input[type="submit"] {
 .bx-wrapper,
 .bx-viewport {
     height: 400px !important;
+}
+
+/*  */
+#logout {
+    background: linear-gradient(to left, #565656, #4A6472);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#about p,
+h2 {
+    text-align: center;
 }

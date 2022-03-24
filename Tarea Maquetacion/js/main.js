@@ -28,7 +28,7 @@ $(document).ready(function () {
         var about_parrafo = $("#about p");
 
         about_parrafo.html("<br><strong>Bienvenido, " + form_name + "</strong> ");
-        about_parrafo.append("<a href='#' id='logout'>Cerrar sesión</a>");
+        about_parrafo.append("<br><br><a href='#' id='logout'>Cerrar sesión</a>");
 
         $("#login").hide();
 
@@ -49,6 +49,8 @@ $(document).ready(function () {
         $("#content").css("background", "#235E3D");
         $("#hora").css("background", "#85A567");
         $("aside").css("background", "#235E3D");
+        $("#logout").css("background", "#85A567");
+
     })
     $("#to-red").click(function () {
         $("nav").css("background", "#CA3413");
@@ -58,6 +60,8 @@ $(document).ready(function () {
         $("#content").css("background", "#CA3413");
         $("#hora").css("background", "#F7A278");
         $("aside").css("background", "#CA3413");
+        $("#logout").css("background", "#F7A278");
+
     })
     $("#to-blue").click(function () {
         $("nav").css("background", "#1F87C4");
@@ -67,6 +71,8 @@ $(document).ready(function () {
         $("#content").css("background", "#1F87C4");
         $("#hora").css("background", "#8B959E");
         $("aside").css("background", "#1F87C4");
+        $("#logout").css("background", "#8B959E");
+
     })
 
 

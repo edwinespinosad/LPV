@@ -329,3 +329,21 @@ label {
 	width: 100%;
 	margin-top: 5px;
 }
+
+/*  */
+#logout {
+    /* background: linear-gradient(to left, #565656, #4A6472); */
+    background: linear-gradient(to left, #565656, #4A6472);
+
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#about p,
+h2 {
+    text-align: center;
+}

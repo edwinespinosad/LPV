@@ -1,4 +1,28 @@
 $(document).ready(function () {
+    $("#login form").submit(function () {
+        var form_name = $("#form_name").val();
+
+        localStorage.setItem("form_name", form_name);
+
+    });
+
+    var form_name = localStorage.getItem("form_name");
+
+    if (form_name != null && form_name != "undefined" && form_name !== "") {
+        var about_parrafo = $("#about p");
+
+        about_parrafo.html("<br><strong>Bienvenido, " + form_name + "</strong> ");
+        about_parrafo.append("<br><br><a href='#' id='logout'>Cerrar sesión</a>");
+
+        $("#login").hide();
+
+        $("#logout").click(function () {
+            localStorage.clear();
+            location.reload();
+        });
+
+    }
+
     $("#seccion1").click(function () {
         $("#contenido1").slideToggle("fast");
     })
@@ -24,6 +48,7 @@ $(document).ready(function () {
         $("aside").css("background", "#235E3D");
         $("#acordeon").css("background", "#235E3D");
         $(".title").css("background", "#85A567");
+        $("#logout").css("background", "#85A567");
         $("#hora").css("background", "#85A567");
     })
 
@@ -37,6 +62,7 @@ $(document).ready(function () {
         $("aside").css("background", "#CA3413");
         $("#acordeon").css("background", "#CA3413");
         $(".title").css("background", "#F7A278");
+        $("#logout").css("background", "#F7A278");
         $("#hora").css("background", "#F7A278");
     })
     $("#to-blue").click(function () {
@@ -48,6 +74,7 @@ $(document).ready(function () {
         $("aside").css("background", "#1F87C4");
         $("#acordeon").css("background", "#1F87C4");
         $(".title").css("background", "#8B959E");
+        $("#logout").css("background", "#8B959E");
         $("#hora").css("background", "#8B959E");
     })
 })

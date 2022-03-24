@@ -224,8 +224,6 @@ span {
     background: #656A55;
     background: linear-gradient(to right, #1F1C18, #8E0E00);
     background: linear-gradient(to left, #565656, #4A6472);
-    /* Created with https://www.css-gradient.com */
-    /* background: linear-gradient(to left, #565656, #ADBAC2); */
     padding: 10px 20px;
     border-radius: 30px;
     text-align: center;
@@ -277,4 +275,22 @@ span {
 #to-blue {
     background: #1F87C4;
     cursor: pointer;
+}
+
+/*  */
+#logout {
+    /* background: linear-gradient(to left, #565656, #4A6472); */
+    background: linear-gradient(to left, #565656, #4A6472);
+
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#about p,
+h2 {
+    text-align: center;
 }
