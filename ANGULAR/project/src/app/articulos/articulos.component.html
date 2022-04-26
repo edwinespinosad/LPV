@@ -1,0 +1,48 @@
+
+<div class="articulos">
+  
+  <h2>Listado de Articulos</h2>
+  <p>Estilos que manejamos:</p>
+
+  <ol>
+    <li *ngFor="let estilo of estilos; let indice = index">
+      {{ estilo}}
+      <button (click)="delEstilo(indice)">Borrar Estilo</button>
+    </li>
+  </ol>
+
+  <p>Nuestras ofertas de hoy:</p>
+
+  <ul>
+    <li *ngFor="let lista of articulos">
+      <span [ngStyle]="{
+        'text-decoration': !lista.stock ? 'line-through' : 'none'
+      }">
+        {{ lista.nombre }} - 
+        <strong [ngClass]="{
+          'fondoRojo': lista.precio > 3000,
+          'subrayado': lista.nombre == 'Nike'
+        }"> 
+          {{ lista.precio}} 
+        </strong>
+      </span>
+
+      <span *ngIf="lista.precio <= 3000" [style.background]="lista.precio <= 3000 ? 'green': 'transparent' "
+        [style.color]="lista.precio <= 3000 ? 'white' : 'black'">OFERTA</span>
+
+    </li>
+  </ul>
+
+  <p>Añadir estilo</p>
+  <p>
+    <input type="text" [(ngModel)]="mi_estilo">
+    <button (click)="getEstilo()">Mostrar Estilo</button>
+    <button (click)="addEstilo()">Agregar Estilo</button>
+  </p>
+
+  <p> {{mi_estilo}}</p>
+
+  <p> <input type="text" [(ngModel)]="mi_estilo" (blur)="onBlur()"></p>
+
+  <p><input type="text" (keydown.enter)="onKeypressEvent($event)" /></p>
+</div>

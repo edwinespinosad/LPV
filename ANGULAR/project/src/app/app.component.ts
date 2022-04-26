@@ -5,6 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  title = 'project';
+  public title = '1er Ejercicio de Angular';
+  public mostrar_Pelicula: boolean = true;
+
+  ocultar_Pelicula(value: any){
+    this.mostrar_Pelicula = value;
+  }
 }

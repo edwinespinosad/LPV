@@ -1,0 +1,16 @@
+.libros {
+  font-family: 'Poppins', serif;
+  /* background: #536A73; */
+  width: calc(100% - 100px);
+  margin-left: 100px;
+  padding: 20px;
+}
+
+h2{
+  font-size: 2em;
+  text-align: center;
+}
+p{
+  font-size: 1.5em;
+  /* background-color: #536A73; */
+}

@@ -1,0 +1,27 @@
+<div id="peliculas">
+
+  <h2>Peliculas Mas Vistas</h2>
+
+
+  <div class="peliculas">
+    <div class="container">
+      <div class="card" *ngFor="let pelicula of peliculas">
+        <div class="face face1">
+          <div class="content">
+            <img [ngStyle]="{
+            'height': '200px'
+          }" src="../../assets/img/{{pelicula.imagen}}" alt="">
+            <h3>{{pelicula.titulo}}</h3>
+          </div>
+        </div>
+
+        <div class="face face2">
+          <div class="content">
+            <p> {{pelicula.descripcion}} </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
