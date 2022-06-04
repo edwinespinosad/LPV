@@ -1,0 +1,59 @@
+<div class="contacto">
+
+  <div class="container">
+    <h2>Contacto</h2>
+
+    <form #formContacto="ngForm" (ngSubmit)="formSubmit()">
+      <div class="form-group">
+        <!-- <label for="nombre">Nombre</label> -->
+        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre"
+          [(ngModel)]="usuario.nombre" required minlength="2" #nombre="ngModel">
+
+        <div *ngIf="nombre.invalid" class="text-muted">
+          <div *ngIf="nombre.errors?.['required']" class="invalid">
+            El nombre es requerido
+          </div>
+          <div *ngIf="nombre.errors?.['minlength']" class="invalid">
+            El nombre debe tener al menos 2 caracteres
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="correo">Correo</label> -->
+        <input type="correo" id="correo" class="form-control" email name="correo" placeholder="Correo"
+          [(ngModel)]="usuario.correo" required #correo="ngModel">
+        <div *ngIf="correo.invalid" class="text-muted">
+          <div *ngIf="correo.errors?.['required']" class="invalid">
+            El correo es requerido
+          </div>
+          <div *ngIf="correo.errors?.['email']" class="invalid">
+            El correo no es válido
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="number" class="form-control" name="edad" placeholder="Edad" [(ngModel)]="usuario.edad" required
+          #edad="ngModel" min="0">
+
+        <div *ngIf="edad.invalid" class="text-muted">
+          <div *ngIf="edad.errors?.['required']" class="invalid">
+            La edad es requerida
+          </div>
+          <div *ngIf="edad.errors?.['min']" class="invalid">
+            La edad debe ser mayor a 0
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="formContacto.invalid">Submit</button>
+    </form>
+
+    <h2>Datos Entrantes:</h2>
+    <p style="text-align:center;">
+      {{usuario | json}}
+    </p>
+
+  </div>
+</div>

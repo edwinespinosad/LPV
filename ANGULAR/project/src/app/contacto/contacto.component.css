@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed:wght@700&display=swap');
+
+.contacto {
+  font-family: 'Poppins', serif;
+  /* background: #536A73; */
+  width: calc(100% - 100px);
+  margin-left: 100px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+.invalid{
+  color: rgb(255, 0, 0);
+}

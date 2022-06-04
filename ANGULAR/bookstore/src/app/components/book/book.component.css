@@ -1,0 +1,52 @@
+.container {
+  background: #F5F4F2;
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+    align-items: center;
+}
+
+.grid .card {
+  background: #F5F4F2;
+  margin-top: 1rem;
+  align-items: center;
+  width: 300px;
+  border: none;
+}
+
+.grid .card img {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+.grid .card h3{
+    color: #444;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.grid .card span i{
+    font-size: 1.5rem;
+  color: #444;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.grid .card span .bx-heart:hover{
+    font-size: 1.5rem;
+  color: rgb(215, 48, 48);
+  cursor: pointer;
+}
+.grid .card span .bx-cart:hover{
+    font-size: 1.5rem;
+  color: rgb(215, 48, 48);
+  cursor: pointer;
+}

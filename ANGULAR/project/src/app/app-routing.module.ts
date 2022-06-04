@@ -7,6 +7,7 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
 import {LibroComponent} from './libro/libro.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { ExternoComponent } from './externo/externo.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'articulos', component: ArticulosComponent },
   { path: 'libro', component: LibroComponent },
   { path: 'externo', component: ExternoComponent },
+  { path: 'contacto', component: ContactoComponent },
   { path: '**', component: HomeComponent}
 ];
 

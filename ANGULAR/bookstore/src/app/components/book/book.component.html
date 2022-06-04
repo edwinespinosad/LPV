@@ -1,0 +1,177 @@
+<div class="container">
+  <ng-template [ngIf]="tema == 1">
+    <h1 id="categoria">Literatura</h1>
+  </ng-template>
+  <ng-template [ngIf]="tema == 2">
+    <h1 id="categoria">Misterio</h1>
+  </ng-template>
+  <ng-template [ngIf]="tema == 3">
+    <h1 id="categoria">Romance</h1>
+  </ng-template>
+  <ng-template [ngIf]="tema == 4">
+    <h1 id="categoria">Politica</h1>
+  </ng-template>
+  <ng-template [ngIf]="tema == 5">
+    <h1 id="categoria">Bienestar</h1>
+  </ng-template>
+  <ng-template [ngIf]="tema == 6">
+    <h1 id="categoria">Sagas</h1>
+  </ng-template>
+  <ng-template [ngIf]="tema == 7">
+    <h1 id="categoria">Comic</h1>
+  </ng-template>
+  <ng-template [ngIf]="tema == 8">
+    <h1 id="categoria">Negocios</h1>
+  </ng-template>
+
+  <section class="libros">
+    <div class="grid">
+      <div class="card" *ngFor="let book of bookService.books">
+
+        <ng-template [ngIf]="tema == 1">
+
+          <img src="../../assets/img/literatura/{{book.imagen}}" alt="">
+          <h3>{{book.titulo}}</h3>
+          <span>
+            <a href="">
+              <i class="bx bx-heart"></i>
+            </a>
+            <a href="">
+              <i class="bx bx-cart"></i>
+            </a>
+          </span>
+        </ng-template>
+        <ng-template [ngIf]="tema == 2">
+          <img src="../../../assets/img/misterio/{{book.imagen}}" alt="">
+          <h3>{{book.titulo}}</h3>
+          <span>
+            <a href="">
+              <i class="bx bx-heart"></i>
+            </a>
+            <a href="">
+              <i class="bx bx-cart"></i>
+            </a>
+          </span>
+        </ng-template>
+        <ng-template [ngIf]="tema == 3">
+          <img src="../../../assets/img/romance/{{book.imagen}}" alt="">
+          <h3>{{book.titulo}}</h3>
+          <span>
+            <a href="">
+              <i class="bx bx-heart"></i>
+            </a>
+            <a href="">
+              <i class="bx bx-cart"></i>
+            </a>
+          </span>
+        </ng-template>
+        <ng-template [ngIf]="tema == 4">
+          <img src="../../../assets/img/politica/{{book.imagen}}" alt="">
+          <h3>{{book.titulo}}</h3>
+          <span>
+            <a href="">
+              <i class="bx bx-heart"></i>
+            </a>
+            <a href="">
+              <i class="bx bx-cart"></i>
+            </a>
+          </span>
+        </ng-template>
+        <ng-template [ngIf]="tema == 5">
+          <img src="../../../assets/img/bienestar/{{book.imagen}}" alt="">
+          <h3>{{book.titulo}}</h3>
+          <span>
+            <a href="">
+              <i class="bx bx-heart"></i>
+            </a>
+            <a href="">
+              <i class="bx bx-cart"></i>
+            </a>
+          </span>
+        </ng-template>
+        <ng-template [ngIf]="tema == 6">
+          <img src="../../../assets/img/sagas/{{book.imagen}}" alt="">
+          <h3>{{book.titulo}}</h3>
+          <span>
+            <a href="">
+              <i class="bx bx-heart"></i>
+            </a>
+            <a href="">
+              <i class="bx bx-cart"></i>
+            </a>
+          </span>
+        </ng-template>
+        <ng-template [ngIf]="tema == 7">
+          <img src="../../../assets/img/comic/{{book.imagen}}" alt="">
+          <h3>{{book.titulo}}</h3>
+          <span>
+            <a href="">
+              <i class="bx bx-heart"></i>
+            </a>
+            <a href="">
+              <i class="bx bx-cart"></i>
+            </a>
+          </span>
+        </ng-template>
+        <ng-template [ngIf]="tema == 8">
+          <!-- <a [routerLink]="['/preview','6298abef3433a215553522ee']"> -->
+        <a [routerLink]="['/preview', book._id]" >
+
+          <!-- <a [routerLink]="['/preview']"> -->
+            <img src="../../../assets/img/negocios/{{book.imagen}}" alt="">
+          </a>
+          <h3>{{book.titulo}}</h3>
+          <h4>{{book._id}}</h4>
+          <span>
+            <a href="">
+              <i class="bx bx-heart"></i>
+            </a>
+            <a href="">
+              <i class="bx bx-cart"></i>
+            </a>
+          </span>
+        </ng-template>
+
+      </div>
+    </div>
+  </section>
+  <!-- <table class="table table-">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>Precio</th>
+                    <th>Descripcion</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of bookService.books">
+                    <td>{{book.id}}</td>
+                    <td>{{book.titulo}}</td>
+                    <td>{{book.autor}}</td>
+                    <td>{{book.precio}}</td>
+                    <td>{{book.descripcion}}</td>
+                    <td>
+                        <ng-template [ngIf]="tema == 1">
+                            <img src="../../../assets/img/literatura/{{book.imagen}}" alt="">
+                        </ng-template>
+                        <ng-template [ngIf]="tema == 2">
+                            <img src="../../../assets/img/misterio/{{book.imagen}}" alt="">
+                        </ng-template>
+                        <ng-template [ngIf]="tema == 3">
+                            <img src="../../../assets/img/romance/{{book.imagen}}" alt="">
+                        </ng-template>
+                        <ng-template [ngIf]="tema == 4">
+                            <img src="../../../assets/img/politica/{{book.imagen}}" alt="">
+                        </ng-template>
+                        <ng-template [ngIf]="tema == 5">
+                            <img src="../../../assets/img/bienestar/{{book.imagen}}" alt="">
+                        </ng-template>
+                    </td>
+                </tr>
+            </tbody>
+        </table> -->
+</div>
+<!-- </div> -->

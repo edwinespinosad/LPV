@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // import { routing, appRoutingProviders } from './app.routing';
 import {RouterModule} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +11,9 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
 import { ArticulosComponent } from './articulos/articulos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
+import { HttpClientModule } from '@angular/common/http'
+import {CommonModule} from '@angular/common';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { ExternoComponent } from './externo/externo.component';
     PeliculasComponent,
     ArticulosComponent,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent,
+    ContactoComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,8 +34,13 @@ import { ExternoComponent } from './externo/externo.component';
       { path: '', component: HomeComponent },
       { path: 'peliculas', component: PeliculasComponent },
       { path: 'libro', component: LibroComponent },
+      { path: 'articulos', component: ArticulosComponent },
+      { path: 'externo', component: ExternoComponent },
+      { path: 'contacto', component: ContactoComponent },
       { path: '**', component: HomeComponent}
     ]),
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

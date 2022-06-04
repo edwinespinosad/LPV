@@ -1,21 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Articulo } from '../models/articulo';
+import { ArticuloService } from '../services/articulo.service';
 
 @Component({
   selector: 'app-articulos',
   templateUrl: './articulos.component.html',
-  styleUrls: ['./articulos.component.css']
+  styleUrls: ['./articulos.component.css'],
+  providers: [ArticuloService]
 })
 export class ArticulosComponent implements OnInit {
   public articulos: Array<Articulo>;
   public estilos: String[];
   public mi_estilo: String;
 
-  constructor() {
+  constructor(private _articuloService: ArticuloService) {
     this.mi_estilo = "Invierno";
-
     this.estilos = new Array();
-
     this.articulos = [
       new Articulo('Tenis', 'Reebok', 3000, 'Clasico', true),
       new Articulo('Tenis', 'Adidas', 2000, 'Verano', true),
@@ -24,8 +24,8 @@ export class ArticulosComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.articulos);
-    this.getEstilos();
+    this.articulos = this._articuloService.getArticulos();
+    alert(this._articuloService.getTexto());
   }
 
   getEstilos() {

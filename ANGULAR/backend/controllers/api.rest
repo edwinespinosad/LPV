@@ -1,0 +1,9 @@
+###
+POST http://localhost:3700/api/editProject/6284633d2b0e65f1c7394936
+Content-Type: application/json
+
+{
+    "imagen": "urdl"
+}
+###
+GET http://localhost:3700/api/getProjects

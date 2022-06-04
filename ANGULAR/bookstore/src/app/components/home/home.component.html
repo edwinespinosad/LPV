@@ -1,0 +1,277 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="banner">
+    <swiper [spaceBetween]="30" [centeredSlides]="true" [autoplay]="{
+      delay: 2500,
+      disableOnInteraction: false
+    }" [pagination]="{
+      clickable: true
+    }" [navigation]="true" class="bannerSwiper">
+      <ng-template swiperSlide>
+        <div class="slide">
+          <img src="../../../assets/img/img1.jpg" alt="">
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="slide">
+          <img src="../../../assets/img/img2.jpg" alt="">
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="slide">
+          <img src="../../../assets/img/img3.jpg" alt="">
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <section class="icons-container">
+
+    <div class="icons">
+      <i class="bx bxs-truck"></i>
+      <div class="content">
+        <h3>Free Shipping</h3>
+        <p>Order over $300 MXN</p>
+      </div>
+    </div>
+
+    <div class="icons">
+      <i class="bx bx-lock"></i>
+      <div class="content">
+        <h3>Secure Payment</h3>
+        <p>100 secure payment</p>
+      </div>
+    </div>
+
+    <div class="icons">
+      <i class="bx bx-redo"></i>
+      <div class="content">
+        <h3>Easy Returns</h3>
+        <p>10 days returns</p>
+      </div>
+    </div>
+
+    <div class="icons">
+      <i class="bx bx-headphone"></i>
+      <div class="content">
+        <h3>24/7 Support</h3>
+        <p>Call us anytime</p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="featured" id="featured">
+
+    <h1 class="heading"> <span>featured books</span> </h1>
+    <swiper [slidesPerView]="4" [spaceBetween]="15" [freeMode]="true" [pagination]="{
+    clickable: true
+  }" [breakpoints]="{
+      '360':{
+        slidesPerView: 1,
+        spaceBetween: 5
+      },
+    '640': {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    '768': {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    '1024': {
+      slidesPerView: 4,
+      spaceBetween: 15
+    }
+  }" class="mySwiper">
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book1.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">el poder del ahora</h3>
+            <p class="card-text">Eckhart Tolle <br /> <strong> $369.00 </strong> </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book2.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">club de las 5 de la mañana</h3>
+            <p class="card-text">Robin Sharma <br /> <strong> $419.00 </strong></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book3.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">el traidor</h3>
+            <p class="card-text">Anabel Hernandez <br /> <strong> $349.00 </strong></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book4.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">mujeres del alma mia</h3>
+            <p class="card-text">Isabel Allende <br /> <strong> $279.00 </strong></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book5.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">el negociador</h3>
+            <p class="card-text">Arturo Elias Ayub <br /> <strong> $279.00 </strong></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </section>
+
+
+  <section class="new">
+    <h1 class="heading"> <span>New books</span> </h1>
+    <swiper [slidesPerView]="4" [spaceBetween]="0" [freeMode]="true" [pagination]="{
+        clickable: true
+      }" [breakpoints]="{
+          '360':{
+            slidesPerView: 1,
+            spaceBetween: 5
+          },
+        '640': {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        '768': {
+          slidesPerView: 2,
+          spaceBetween: 15
+        },
+        '1024': {
+          slidesPerView: 4,
+          spaceBetween: 15
+        }
+      }" class="swiperNewBooks">
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book1.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">el poder del ahora</h3>
+            <p class="card-text">Eckhart Tolle <br /> <strong> $369.00 </strong> </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book2.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">club de las 5 de la mañana</h3>
+            <p class="card-text">Robin Sharma <br /> <strong> $419.00 </strong></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book3.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">el traidor</h3>
+            <p class="card-text">Anabel Hernandez <br /> <strong> $349.00 </strong></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book4.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">mujeres del alma mia</h3>
+            <p class="card-text">Isabel Allende <br /> <strong> $279.00 </strong></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card">
+          <img src="../../../assets/img/book5.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title">el negociador</h3>
+            <p class="card-text">Arturo Elias Ayub <br /> <strong> $279.00 </strong></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </section>
+
+  <section class="topics">
+    <h1 class="heading"> <span>Topics</span> </h1>
+    <div class="grid">
+      <div class="card">
+        <a [routerLink]="['/libros']" [queryParams]="{temaID: '1'}">
+          <img src="../../../assets/img/literatura.jpg" alt="">
+        </a>
+        <h3> <strong>Literatura</strong></h3>
+      </div>
+      <div class="card">
+        <a [routerLink]="['/libros']" [queryParams]="{temaID: '2'}">
+          <img src="../../../assets/img/misterio.jpg" alt="">
+        </a>
+        <h3> <strong>Misterio</strong></h3>
+      </div>
+      <div class="card">
+        <a [routerLink]="['/libros']" [queryParams]="{temaID: '3'}">
+          <img src="../../../assets/img/romantica.jpg" alt="">
+        </a>
+        <h3> <strong>Romance</strong></h3>
+      </div>
+      <div class="card">
+        <a [routerLink]="['/libros']" [queryParams]="{temaID: '4'}">
+          <img src="../../../assets/img/politica.jpg" alt="">
+        </a>
+        <h3> <strong>Politica</strong></h3>
+      </div>
+      <div class="card">
+        <a [routerLink]="['/libros']" [queryParams]="{temaID: '5'}">
+          <img src="../../../assets/img/bienestar.jpg" alt="">
+        </a>
+        <h3> <strong>Bienestar</strong></h3>
+      </div>
+      <div class="card">
+        <a [routerLink]="['/libros']" [queryParams]="{temaID: '6'}">
+          <img src="../../../assets/img/sagas.jpg" alt="">
+        </a>
+        <h3> <strong>Sagas</strong></h3>
+      </div>
+      <div class="card">
+        <a [routerLink]="['/libros']" [queryParams]="{temaID: '7'}">
+          <img src="../../../assets/img/comic.jpg" alt="">
+        </a>
+        <h3> <strong>Comic</strong></h3>
+      </div>
+      <div class="card">
+        <a [routerLink]="['/libros']" [queryParams]="{temaID: '8'}">
+          <img src="../../../assets/img/negocios.jpg" alt="">
+        </a>
+        <h3> <strong>Negocios</strong></h3>
+      </div>
+
+    </div>
+
+  </section>

@@ -1,0 +1,34 @@
+<div class="container">
+
+  <h2 class="titulo">{{titulo}}</h2>
+
+  <form class="form" #proyectoForm="ngForm" (ngSubmit)="onSubmit(proyectoForm)">
+    <p>
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" #name="ngModel" [(ngModel)]="project.nombre" />
+    </p>
+
+    <p>
+      <label for="semestre">Semestre</label>
+      <textarea name="semestre" #semestre="ngModel" [(ngModel)]="project.semestre"></textarea>
+    </p>
+
+    <p>
+      <label for="materia">Materia</label>
+      <input type="text" name="materia" #materia="ngModel" [(ngModel)]="project.materia" />
+    </p>
+
+    <p>
+      <label for="anio">Año</label>
+      <input type="number" name="anio" #anio="ngModel" [(ngModel)]="project.anio" />
+    </p>
+
+    <p>
+      <label for="image">Imagen</label>
+      <input type="file" name="imagen" (change)="fileChangeEvent($event)" />
+    </p>
+
+    <input type="submit" value="Enviar" />
+  </form>
+
+</div>

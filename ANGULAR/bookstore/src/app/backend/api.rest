@@ -1,0 +1,35 @@
+###
+GET http://localhost:3700/api/books/
+###
+POST http://localhost:3700/api/books/
+Content-Type: application/json
+
+
+{
+  "id": "40",
+  "titulo": "Lo Creas, Si Lo Crees",
+  "autor": "Brian Tracy",
+  "precio": 199,
+  "descripcion": "Descubre los secretos para eliminar pensamientos y conductas negativas y desbloquear todo tu potencial para el éxito. Si te sientes atrapado, abrumado o incapaz de escapar de tus pensamientos negativos, este libro te pondrá en el camino correcto. Ya sea que esta negatividad provenga de una relación pasada que terminó mal, un trauma infantil, un fracaso profesional o simple inseguridad, este libro te ayudará a reconocer cómo la negatividad consciente (y muchas veces inconsciente) afecta tu personalidad, tu perspectiva y tus decisiones. Si lo crees, lo creas está lleno de consejos reveladores del autor bestseller Brian Tracy, junto con el asesoramiento de la psicoterapeuta Christina Stein; aprenderás a identificar y superar patrones e ideas perjudiciales, a recuperar el control de tus pensamientos, sentimientos y acciones, a convertir lo negativo en positivo y a aceptar cambios de vida inesperados sin caer en viejos patrones negativos para alcanzar tus metas y sentirte satisfecho.",
+    "tema": "Negocios",
+    "imagen": "10.jpg",
+    "temaID": 8
+}
+
+###
+GET http://localhost:3700/api/books/11
+###
+GET http://localhost:3700/api/books/tema/8
+###
+GET http://localhost:3700/api/books/libro/6298c300fae1988d0a02072a
+###
+GET http://localhost:3700/api/books/?=literata
+###
+DELETE http://localhost:3700/api/books/628930e7a31cd2735ba84fe6
+###
+PUT http://localhost:3700/api/books/6288668a76f276430671c35a
+Content-Type: application/json
+
+{
+    "temaID": 1
+}
