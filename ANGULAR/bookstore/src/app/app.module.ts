@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { BookComponent } from './components/book/book.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PreviewComponent } from './components/preview/preview.component';
+import { CartComponent } from './components/cart/cart.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { PreviewComponent } from './components/preview/preview.component';
     LiteraturaComponent,
     BookComponent,
     PreviewComponent,
+    CartComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

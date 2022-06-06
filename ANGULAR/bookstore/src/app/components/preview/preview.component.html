@@ -2,8 +2,35 @@
 
   <section class="book">
     <div *ngFor="let book of this.book">
-      <h2>{{book.titulo}}</h2>
+      <div class="bookContent">
+        <div>
+          <img src="../../../assets/img/{{book.tema.toLowerCase()}}/{{book.imagen}}" alt="">
+        </div>
+        <div>
+          <h2 class="title">{{book.titulo}}</h2>
+          <h2 class="precio">${{book.precio}}.00</h2>
+          <h3 class="autor">Author: <strong>{{book.autor}}</strong></h3>
+          <hr>
+          <h4 class="quantity">Quantity</h4>
+          <input id="quantity" type="number" class="form-control-sm" value="1">
+          <!-- <button class="btn btn-primary m-2">Add to cart</button> -->
+          <button class="btn btn-primary m-2" (click)="addToCart(book._id, book.titulo, book.precio, book.imagen, book.tema)">Add to cart</button>
+          <div class="ship">
+            <i class="bx bxs-truck"></i>
+            <p>Free Shipping on purchases from $299 MXN <br>
+              Standard delivery time: 2 to 9 business days. </p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="descripcionContent">
+        <h2 class="descripcion text-center">Description</h2>
+        <hr>
+        <p>{{book.descripcion}}</p>
+      </div>
     </div>
+
   </section>
 
 </div>

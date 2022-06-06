@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+.carrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.articulos {
+  border: .1rem solid rgba(0, 0, 0, .1);
+}
+
+.total {
+  /* border-bottom: .1rem solid rgba(0, 0, 0, .1); */
+  border: .1rem solid rgba(0, 0, 0, .1);
+  height: 50%;
+  width: 20%;
+}
+
+.btnBuy {
+  width: 100%;
+}
+
+.tblArticles {
+  width: 700px;
+}
+
+input {
+  width: 70px;
+}
+
+i {
+  font-size: 1.5rem;
+  color: #ff0000;
+  padding: 0.2rem;
+  /* border: 1px solid red; */
+  cursor: pointer;
+}
+
+table img {
+  width: 150px;
+  height: 150px;
+}
+
+table .data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+table .libro {
+  cursor: pointer;
+    height: 30px;
+    transition: 0.2s;
+}
+
+table .libro:hover {
+  color: #9E59D9;
+}
+
+.cartEmpty{
+  margin: 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+}

@@ -29,95 +29,97 @@
       <div class="card" *ngFor="let book of bookService.books">
 
         <ng-template [ngIf]="tema == 1">
-
-          <img src="../../assets/img/literatura/{{book.imagen}}" alt="">
+          <a [routerLink]="['/preview', book._id]">
+            <img src="../../assets/img/literatura/{{book.imagen}}" alt="">
+          </a>
           <h3>{{book.titulo}}</h3>
           <span>
             <a href="">
               <i class="bx bx-heart"></i>
             </a>
-            <a href="">
-              <i class="bx bx-cart"></i>
-            </a>
+            <i class="bx bx-cart" (click)="addToCart(book._id!, book.titulo, book.precio, book.imagen, book.tema)"></i>
           </span>
         </ng-template>
         <ng-template [ngIf]="tema == 2">
-          <img src="../../../assets/img/misterio/{{book.imagen}}" alt="">
+          <a [routerLink]="['/preview', book._id]">
+            <img src="../../../assets/img/misterio/{{book.imagen}}" alt="">
+          </a>
           <h3>{{book.titulo}}</h3>
           <span>
             <a href="">
               <i class="bx bx-heart"></i>
             </a>
-            <a href="">
-              <i class="bx bx-cart"></i>
-            </a>
+            <i class="bx bx-cart" (click)="addToCart(book._id!, book.titulo, book.precio, book.imagen, book.tema)"></i>
+
           </span>
         </ng-template>
         <ng-template [ngIf]="tema == 3">
-          <img src="../../../assets/img/romance/{{book.imagen}}" alt="">
+          <a [routerLink]="['/preview', book._id]">
+            <img src="../../../assets/img/romance/{{book.imagen}}" alt="">
+          </a>
           <h3>{{book.titulo}}</h3>
           <span>
             <a href="">
               <i class="bx bx-heart"></i>
             </a>
-            <a href="">
-              <i class="bx bx-cart"></i>
-            </a>
+            <i class="bx bx-cart" (click)="addToCart(book._id!, book.titulo, book.precio, book.imagen, book.tema)"></i>
+
           </span>
         </ng-template>
         <ng-template [ngIf]="tema == 4">
-          <img src="../../../assets/img/politica/{{book.imagen}}" alt="">
+          <a [routerLink]="['/preview', book._id]">
+            <img src="../../../assets/img/politica/{{book.imagen}}" alt="">
+          </a>
           <h3>{{book.titulo}}</h3>
           <span>
             <a href="">
               <i class="bx bx-heart"></i>
             </a>
-            <a href="">
-              <i class="bx bx-cart"></i>
-            </a>
+            <i class="bx bx-cart" (click)="addToCart(book._id!, book.titulo, book.precio, book.imagen, book.tema)"></i>
+
           </span>
         </ng-template>
         <ng-template [ngIf]="tema == 5">
-          <img src="../../../assets/img/bienestar/{{book.imagen}}" alt="">
+          <a [routerLink]="['/preview', book._id]">
+            <img src="../../../assets/img/bienestar/{{book.imagen}}" alt="">
+          </a>
           <h3>{{book.titulo}}</h3>
           <span>
             <a href="">
               <i class="bx bx-heart"></i>
             </a>
-            <a href="">
-              <i class="bx bx-cart"></i>
-            </a>
+            <i class="bx bx-cart" (click)="addToCart(book._id!, book.titulo, book.precio, book.imagen, book.tema)"></i>
+
           </span>
         </ng-template>
         <ng-template [ngIf]="tema == 6">
-          <img src="../../../assets/img/sagas/{{book.imagen}}" alt="">
+          <a [routerLink]="['/preview', book._id]">
+            <img src="../../../assets/img/sagas/{{book.imagen}}" alt="">
+          </a>
           <h3>{{book.titulo}}</h3>
           <span>
             <a href="">
               <i class="bx bx-heart"></i>
             </a>
-            <a href="">
-              <i class="bx bx-cart"></i>
-            </a>
+            <i class="bx bx-cart" (click)="addToCart(book._id!, book.titulo, book.precio, book.imagen, book.tema)"></i>
+
           </span>
         </ng-template>
         <ng-template [ngIf]="tema == 7">
-          <img src="../../../assets/img/comic/{{book.imagen}}" alt="">
+          <a [routerLink]="['/preview', book._id]">
+            <img src="../../../assets/img/comic/{{book.imagen}}" alt="">
+          </a>
           <h3>{{book.titulo}}</h3>
           <span>
             <a href="">
               <i class="bx bx-heart"></i>
             </a>
-            <a href="">
-              <i class="bx bx-cart"></i>
-            </a>
+            <i class="bx bx-cart" (click)="addToCart(book._id!, book.titulo, book.precio, book.imagen, book.tema)"></i>
+
           </span>
         </ng-template>
         <ng-template [ngIf]="tema == 8">
-          <!-- <a [routerLink]="['/preview','6298abef3433a215553522ee']"> -->
-        <a [routerLink]="['/preview', book._id]" >
-
-          <!-- <a [routerLink]="['/preview']"> -->
+          <a [routerLink]="['/preview', book._id]">
             <img src="../../../assets/img/negocios/{{book.imagen}}" alt="">
           </a>
           <h3>{{book.titulo}}</h3>
@@ -126,52 +128,12 @@
             <a href="">
               <i class="bx bx-heart"></i>
             </a>
-            <a href="">
-              <i class="bx bx-cart"></i>
-            </a>
+            <i class="bx bx-cart" (click)="addToCart(book._id!, book.titulo, book.precio, book.imagen, book.tema)"></i>
+
           </span>
         </ng-template>
 
       </div>
     </div>
   </section>
-  <!-- <table class="table table-">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Titulo</th>
-                    <th>Autor</th>
-                    <th>Precio</th>
-                    <th>Descripcion</th>
-                    <th>Imagen</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let book of bookService.books">
-                    <td>{{book.id}}</td>
-                    <td>{{book.titulo}}</td>
-                    <td>{{book.autor}}</td>
-                    <td>{{book.precio}}</td>
-                    <td>{{book.descripcion}}</td>
-                    <td>
-                        <ng-template [ngIf]="tema == 1">
-                            <img src="../../../assets/img/literatura/{{book.imagen}}" alt="">
-                        </ng-template>
-                        <ng-template [ngIf]="tema == 2">
-                            <img src="../../../assets/img/misterio/{{book.imagen}}" alt="">
-                        </ng-template>
-                        <ng-template [ngIf]="tema == 3">
-                            <img src="../../../assets/img/romance/{{book.imagen}}" alt="">
-                        </ng-template>
-                        <ng-template [ngIf]="tema == 4">
-                            <img src="../../../assets/img/politica/{{book.imagen}}" alt="">
-                        </ng-template>
-                        <ng-template [ngIf]="tema == 5">
-                            <img src="../../../assets/img/bienestar/{{book.imagen}}" alt="">
-                        </ng-template>
-                    </td>
-                </tr>
-            </tbody>
-        </table> -->
 </div>
-<!-- </div> -->

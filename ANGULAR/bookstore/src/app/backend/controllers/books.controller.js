@@ -14,17 +14,6 @@ bookCtrl.createBook = async (req, res) => {
     res.send({ message: 'Book saved' });
 }
 
-// bookCtrl.getBook = async (req, res) => {
-//     const {id} = req.params;
-//     const book = await Book.findById(id);
-
-//     res.send(book);
-//     // const book = await Book.findOne({ titulo: req.params.titulo });
-//     // res.json(book);
-//     console.log(id);
-//     console.log(book);
-// }
-
 bookCtrl.getBook = async (req, res) => {
     const {id} = req.params;
     const book = await Book.findById(id);
@@ -34,25 +23,8 @@ bookCtrl.getBook = async (req, res) => {
 }
 
 bookCtrl.getBooksByCategory = async (req, res) => {
-    // console.log("Route: ", req.params.categoriaID);
     const books = await Book.find({ temaID: req.params.categoriaID });
-    //console.log(req.params.categoriaID);
     res.send(books);
-    // console.log(books);
 }
-
-
-
-// bookCtrl.editBook = async(req, res) => { 
-//     await Book.findByIdAndUpdate(req.params.id, req.body);
-//     res.json({ message: 'Book ' + req.params.id + ' updated' });
-// }
-// bookCtrl.deleteBook = async (req, res) => {
-//     await Book.findByIdAndDelete(req.params.id);
-//     res.json({ message: 'Book ' + req.params.id + ' deleted' });
-// }
-
-
-
 
 module.exports = bookCtrl;

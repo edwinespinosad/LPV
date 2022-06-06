@@ -1,0 +1,74 @@
+.contain {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.bookContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: center; */
+  padding: 1rem;
+  margin: 1rem;
+}
+.bookContent img{
+    width: 500px;
+    height: 500px;
+}
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: gray;
+}
+
+.autor {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.ship {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  margin-top: 1rem;
+}
+
+.ship i {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.btn {
+  background: #9E59D9;
+  border: 1px solid #9E59D9;
+}
+
+.quantity {
+  margin-top: 1rem;
+  margin-bottom: -0.5rem;
+  color: gray;
+}
+
+.container .descripcion {
+  padding: 1rem;
+  margin: 1rem;
+  /* border-bottom: .1rem solid rgba(0, 0, 0, .1); */
+}
+
+.container .descripcionContent {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+}

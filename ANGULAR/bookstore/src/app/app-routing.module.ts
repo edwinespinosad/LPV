@@ -4,12 +4,15 @@ import { HomeComponent } from './components/home/home.component';
 import { LiteraturaComponent } from './components/literatura/literatura.component';
 import { BookComponent } from './components/book/book.component';
 import {PreviewComponent} from './components/preview/preview.component';
+import {CartComponent} from './components/cart/cart.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent},
   // { path: '**', component: HomeComponent}, 
   { path: 'literatura', component: LiteraturaComponent},
   { path: 'libros', component: BookComponent},
-  { path: 'preview/:id', component: PreviewComponent}
+  { path: 'preview/:id', component: PreviewComponent},
+  { path: 'cart', component: CartComponent},
   
 ];
 export const appRoutingProviders: any[] = [];

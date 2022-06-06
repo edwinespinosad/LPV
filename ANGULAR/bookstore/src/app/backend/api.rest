@@ -33,3 +33,30 @@ Content-Type: application/json
 {
     "temaID": 1
 }
+
+###
+POST http://localhost:3700/api/cart/add
+Content-Type: application/json
+
+{
+    "idLibro": "12332",
+    "cantidad": 2,
+    "precio": 100,
+    "nombreLibro" : "Test2",
+    "imagen": "img.jpg",
+    "envio":50,
+    "total": 150,
+
+}
+
+###
+GET http://localhost:3700/api/cart
+
+###
+PUT http://localhost:3700/api/cart/628ce48e55961f7bae3f6385
+
+Content-Type: application/json
+
+{
+    "cantidad": 5,
+}
