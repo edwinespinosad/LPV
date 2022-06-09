@@ -13,6 +13,13 @@ body {
   font-size: 20px;
   /* background: url("../img/pattern.png"); */
   background-attachment: fixed;
+  background: #485563;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #29323c, #485563);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .clearfix {
@@ -82,13 +89,22 @@ header a:hover,
 
 #content {
   min-height: 600px;
-  height: auto;
+  /* height: auto; */
   width: 75%;
   margin: 0px auto;
   box-shadow: 0px 0px 40px black;
   border-left: 1px solid #b7b7b7;
   border-right: 1px solid #b7b7b7;
-  background: rgba(255, 255, 255, 0.7);
+  /* background: rgba(255, 255, 255, 0.7); */
+  background: rgba(108, 227, 212, 0.7);
+  /* Created with https://www.css-gradient.com */
+  background: #485563;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #29323c, #485563);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   padding-top: 120px;
 }
 
@@ -102,6 +118,12 @@ footer {
   margin: 0 auto;
   padding-top: 15px;
   color: rgba(0, 0, 0, 0.5);
+  background: #485563;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #29323c, #485563);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
@@ -269,7 +291,7 @@ form input[disabled] {
 
 /*Pagina de proyectos*/
 
-.project {
+#content .project {
   list-style: none;
   display: block;
   float: left;

@@ -14,6 +14,7 @@ import { ExternoComponent } from './externo/externo.component';
 import { HttpClientModule } from '@angular/common/http'
 import {CommonModule} from '@angular/common';
 import { ContactoComponent } from './contacto/contacto.component';
+import {AlertModule } from '@coreui/angular';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ContactoComponent } from './contacto/contacto.component';
       { path: '**', component: HomeComponent}
     ]),
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    AlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

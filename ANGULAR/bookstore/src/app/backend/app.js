@@ -8,6 +8,7 @@ var app = express();
 // cargar archivos rutas
 var proyecto_routes = require('./routes/books.routes.js');
 var cart_routes = require('./routes/cart.routes.js');
+var users_routes = require('./routes/users.routes.js');
 // middlewares
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 
 app.use('/api/books', proyecto_routes);
 app.use('/api', cart_routes);
+app.use('/api/users', users_routes);
 
 // Exportar
 module.exports = app;

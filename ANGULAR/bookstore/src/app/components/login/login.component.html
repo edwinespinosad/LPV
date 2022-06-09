@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="container">
+  <div *ngIf="this.identity!==null; then mostrarPerfil else signUp"></div>
+  <ng-template #signUp class="signup">
+    <h2>Hello Again!</h2>
+    <form class="form" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm, user.email, user.password)">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="user.email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <h4>Don't have an account yet? <a [routerLink]="['/signup']">Sign up now</a> </h4>
+
+  </ng-template>
+  <ng-template #mostrarPerfil>
+    <h2>Perfil</h2>
+    <h3>Email: {{this.identity}}</h3>
+    <button type="button" class="btn btn-warning" (click)="signOut(this.identity!)">Sign Out</button>
+  </ng-template>
+
+</div>

@@ -13,7 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 import { PreviewComponent } from './components/preview/preview.component';
 import { CartComponent } from './components/cart/cart.component';
 import { LoginComponent } from './components/login/login.component';
-
+import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './components/signup/signup.component';
+import { PagoComponent } from './components/pago/pago.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +25,8 @@ import { LoginComponent } from './components/login/login.component';
     PreviewComponent,
     CartComponent,
     LoginComponent,
+    SignupComponent,
+    PagoComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,8 @@ import { LoginComponent } from './components/login/login.component';
       { path: 'preview', component: PreviewComponent },
       { path: '**', component: HomeComponent}
     ]),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

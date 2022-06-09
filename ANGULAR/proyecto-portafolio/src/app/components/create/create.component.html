@@ -1,34 +1,34 @@
 <div class="container">
-
   <h2 class="titulo">{{titulo}}</h2>
 
   <form class="form" #proyectoForm="ngForm" (ngSubmit)="onSubmit(proyectoForm)">
-    <p>
+    <div class="form-group">
       <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" #name="ngModel" [(ngModel)]="project.nombre" />
-    </p>
+      <input class="form-control" type="text" name="nombre" #name="ngModel" [(ngModel)]="project.nombre" />
+    </div>
 
-    <p>
+    <div class="form-group">
       <label for="semestre">Semestre</label>
-      <textarea name="semestre" #semestre="ngModel" [(ngModel)]="project.semestre"></textarea>
-    </p>
+      <input type="text" class="form-control" name="semestre" #semestre="ngModel" [(ngModel)]="project.semestre">
+    </div>
 
-    <p>
+    <div class="form-group">
       <label for="materia">Materia</label>
-      <input type="text" name="materia" #materia="ngModel" [(ngModel)]="project.materia" />
-    </p>
+      <input class="form-control" type="text" name="materia" #materia="ngModel" [(ngModel)]="project.materia" />
+    </div>
 
-    <p>
+    <div class="form-group">
       <label for="anio">Año</label>
-      <input type="number" name="anio" #anio="ngModel" [(ngModel)]="project.anio" />
-    </p>
+      <input class="form-control" type="number" name="anio" #anio="ngModel" [(ngModel)]="project.anio" />
+    </div>
 
-    <p>
+    <div class="form-group">
       <label for="image">Imagen</label>
-      <input type="file" name="imagen" (change)="fileChangeEvent($event)" />
-    </p>
+      <input class="form-control" type="file" name="imagen" (change)="fileChangeEvent($event)" />
+    </div>
 
-    <input type="submit" value="Enviar" />
+    <!-- <input  type="submit" value="Enviar" /> -->
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
 
 </div>

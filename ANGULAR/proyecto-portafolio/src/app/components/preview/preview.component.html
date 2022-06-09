@@ -1,0 +1,17 @@
+<div class="container">
+  <a [routerLink]="['/proyectos']">Back</a>
+  <h2>{{this.project.nombre}}</h2>
+  <div class="proyecto">
+
+    <div class="datos">
+      <p>Semestre: {{this.project.semestre}}</p>
+      <p>Materia: {{this.project.materia}}</p>
+      <p>Año: {{this.project.anio}}</p>
+    </div>
+
+    <div class="image">
+      <img src="{{url+'get-image/'+this.project.imagen}}" *ngIf="this.project.imagen">
+    </div>
+  </div>
+
+</div>

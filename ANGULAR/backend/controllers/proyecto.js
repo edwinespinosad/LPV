@@ -86,8 +86,25 @@ var controller = {
             if (!projectUpdated) return res.status(404).send({ message: 'No se ha podido guardar el proyecto.' });
             return res.status(200).send({ project: projectUpdated });
         });
-    }
+    },
 
+    getProject: function (req, res) {
+        var projectId = req.params.id;
+        Project.findById(projectId).exec((err, project) => {
+            if (err) return res.status(500).send({ message: 'Error en la petición' });
+            if (!project) return res.status(404).send({ message: 'No existe el proyecto' });
+            return res.status(200).send({ project });
+        });
+    },
+
+    deleteProject: function (req, res) {
+        var projectId = req.params.id;
+        Project.findByIdAndRemove(projectId, (err, projectRemoved) => {
+            if (err) return res.status(500).send({ message: 'Error en la petición' });
+            if (!projectRemoved) return res.status(404).send({ message: 'No se ha podido borrar el proyecto' });
+            return res.status(200).send({ project: "Proyecto eliminado" });
+        });
+    }
 };
 
 module.exports = controller;

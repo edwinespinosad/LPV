@@ -1,6 +1,7 @@
 import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { Cart } from '../../models/cart';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -13,7 +14,7 @@ export class CartComponent implements OnInit {
   public total: number;
   public envio: number;
   public tema: string;
-  constructor(public cartService: CartService) {
+  constructor(public cartService: CartService, private router: Router) { 
     this.cart = [];
     this.total = 0;
     this.envio = 0;
@@ -42,33 +43,6 @@ export class CartComponent implements OnInit {
         console.log(err);
       })
     }
-  }
-  reloadCart() {
-
-    for (let index = 0; index < this.cart.length; index++) {
-      if (this.cart[index]['_id']) {
-        console.log(this.cart[index]['_id']);
-        let id = this.cart[index]['_id']?.toString();
-        ///
-        var input = ".cantidad" + id;
-        const selectElement = document.querySelector(input);
-        selectElement?.addEventListener('change', (event) => {
-          console.log("Inside change event");
-          const target = event.target as HTMLInputElement;
-          console.log("Valor: " + target.value);
-          let cantidad = parseInt(target.value);
-        });
-        ///
-        let cantidad = this.cart[index]['cantidad'];
-        // this.cartService.updateCart(id || "", this.cart[index]['cantidad']).subscribe((res) => {
-        //   console.log(res);
-        // }, err => {
-        //   console.log(err);
-        // }
-        // );
-      }
-    }
-
   }
 
   getCart() {
@@ -105,6 +79,24 @@ export class CartComponent implements OnInit {
       err => {
         console.log(err);
       });
+  }
+
+  buy(){
+    if(localStorage.getItem('identity')===null){
+      const alert = document.createElement('div');
+      alert.classList.add('alert');
+      alert.classList.add('alert-warning');
+      alert.classList.add('alert-dismissible')
+      alert.classList.add('fade');
+      alert.classList.add('show');
+      alert.innerHTML = `
+                    <strong>You must be logged in to buy!</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    `;
+      document.getElementsByClassName('articulos')[0].append(alert);
+    }else{
+      this.router.navigate(['/pago']);
+    }
   }
 
   removeItem(id: number) {

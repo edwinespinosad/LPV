@@ -20,6 +20,19 @@ export class ProjectsComponent implements OnInit {
     this.getProjects();
   }
 
+  deleteProject(id: string) {
+    this._projectService.deleteProject(id).subscribe(
+      response => {
+        if(response.project){
+          this.getProjects();
+        }
+      },
+      error => {
+        console.log(<any>error);
+      }
+    );
+  }
+
   getProjects(){
     console.log("Getting projects...");
     this._projectService.getProjects().subscribe(

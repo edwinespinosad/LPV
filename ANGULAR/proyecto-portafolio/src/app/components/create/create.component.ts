@@ -54,7 +54,7 @@ export class CreateComponent implements OnInit {
                 alert.classList.add('alert-dismissible')
                 alert.classList.add('fade');
                 alert.classList.add('show');
-                
+
                 alert.innerHTML = `
                 <strong>Proyecto creado con exito!</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -79,7 +79,7 @@ export class CreateComponent implements OnInit {
 
         } else {
           this.status = 'failed';
-          
+
         }
       },
       error => {
